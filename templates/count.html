@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Count</title>
+</head>
+<body>
+<h1>This is count page</h1>
+
+<h2>Your string contains {{number}} words!</h2>
+
+<h3>Word count specified:</h3>
+{% for word, count in worddictionary %}
+{{word}}
+<br/>
+{{count}}
+<br/>
+{%endfor%}
+
+<h4>Original string:</h4>
+{{ fulltext }}
+
+<form action="{% url 'home' %}">
+    <input type="submit" value="Return home"/>
+</form>
+</body>
+</html>
